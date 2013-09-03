@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  receptiondate: 2013-09-03 13:59:20
+  contact: MyString
+  client: MyString
+  memo: MyText
+
+two:
+  receptiondate: 2013-09-03 13:59:20
+  contact: MyString
+  client: MyString
+  memo: MyText
