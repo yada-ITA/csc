@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Receptiondate:</b>
+  <%= @inquery.receptiondate %>
+</p>
+
+<p>
+  <b>受付者:</b>
+  <%= @inquery.contact %>
+</p>
+
+<p>
+  <b>顧客:</b>
+  <%= @inquery.client %>
+</p>
+
+
+<p>
+  <b>期限:</b>
+  <%= @inquery.deadline %>
+</p>
+
+<p>
+  <b>タイトル:</b>
+  <%= @inquery.title %>
+</p>
+
+
+
+<p>
+  <b>Memo:</b>
+  <%= @inquery.memo %>
+</p>
+
+
+<%= link_to 'Edit', edit_inquery_path(@inquery) %> |
+<%= link_to 'Back', inqueries_path %>
