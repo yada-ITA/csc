@@ -67,9 +67,14 @@ class InquiriesController < ApplicationController
     if !params[:id].blank?
       result = result.where('id = ?', params[:id])
     end
+    
+    if !params[:contact].blank?
+      result = result.where('contact = ?', params[:contact])
+    end
+    
     @inquiries = result
     render "index"
-  end
+   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
