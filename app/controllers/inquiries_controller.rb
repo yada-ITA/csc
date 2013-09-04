@@ -63,7 +63,11 @@ class InquiriesController < ApplicationController
   end
 
   def search
-    @inquiries = Inquiry.where('id = ?', params[:id])
+    result = Inquiry.all()
+    if !params[:id].blank?
+      result = result.where('id = ?', params[:id])
+    end
+    @inquiries = result
     render "index"
   end
 
