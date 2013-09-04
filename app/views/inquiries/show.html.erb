@@ -1,33 +1,82 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Receptiondate:</strong>
+  <strong>受付日:</strong>
   <%= @inquiry.receptiondate %>
 </p>
 
 <p>
-  <strong>Contact:</strong>
-  <%= @inquiry.contact %>
+  <strong>受付者:</strong>
+  <%= @inquiry.utanto %>
 </p>
 
 <p>
-  <strong>Client:</strong>
+  <strong>顧客名:</strong>
   <%= @inquiry.client %>
 </p>
 
 <p>
- <strong>Deadline:</strong>
- <%= @inquiry.deadline %>
+  <strong>顧客担当:</strong>
+  <%= @inquiry.ctanto %>
 </p>
 
 <p>
- <strong>Title:</strong>
+ <strong>物件名:</strong>
  <%= @inquiry.title %>
 </p>
 
 <p>
-  <strong>Memo:</strong>
+  <strong>アクション:</strong>
+  <%= @inquiry.contact %>
+</p>
+
+<p>
+ <strong>用件:</strong>
+ <%= @inquiry.youken %>
+</p>
+
+<p>
+ <strong>リアクション:</strong>
+ <%= @inquiry.recontact %>
+</p>
+
+<p>
+ <strong>処理期日:</strong>
+ <%= @inquiry.deadline %>
+</p>
+
+<p>
+ <strong>対応担当者:</strong>
+ <%= @inquiry.ttanto %>
+</p>
+
+<p>
+  <strong>メモ:</strong>
   <%= @inquiry.memo %>
+</p>
+
+<p>
+  <strong>緊急度:</strong>
+  <%= @inquiry.kinkyu %>
+</p>
+
+<p>
+ <strong>対応状況:</strong>
+ <%= @inquiry.jyokyo %>
+</p>
+
+<p>
+  <strong>処理対応:</strong>
+  <%= @inquiry.taiou %>
+</p>
+
+<p>
+  <strong>今後の対応:</strong>
+  <%= @inquiry.gotaiou %>
+</p>
+<p>
+  <strong>対応担当メモ:</strong>
+  <%= @inquiry.tmemo %>
 </p>
 
 <%= link_to 'Edit', edit_inquiry_path(@inquiry) %> |
