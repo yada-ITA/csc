@@ -1,16 +1,37 @@
 <h1>Listing inquiries</h1>
 
+
+<h2>id検索</h2>
+<%= form_tag "search", method: :get do %>
+<p><%= text_field_tag "id", params[:id] %>
+
+<h2>contact検索</h2>
+<p><%= text_field_tag "contact", params[:contact] %>
+
+<%= submit_tag "検索" %></p>
+<% end %>
+
+<br>
 <table>
   <thead>
     <tr>
-      <th>対応状況</th>
+      <th>ID</th>
       <th>受付日</th>
-      <th>物件名</th>
+      <th>受付者</th>
+      <th>担当者</th>
       <th>顧客名</th>
-      <th>アクション</th>
-      <th>緊急度</th>
+      <th>顧客担当</th>
+      <th>物件名</th>
+      <th>メモ</th>
       <th>処理期日</th>
-      <th>対応担当者</th>
+      <th>対応状況</th>
+      <th>アクション</th>
+      <th>用件</th>
+      <th>リアクション</th>
+      <th>緊急度</th>
+      <th>処理対応</th>
+      <th>今後の対応</th>
+      <th>担当者メモ</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,14 +41,24 @@
   <tbody>
     <% @inquiries.each do |inquiry| %>
       <tr>
-        <td><%= inquiry.jyokyo %></td>
+        <td><%= inquiry.id %></td>
         <td><%= inquiry.receptiondate %></td>
-        <td><%= inquiry.title %></td>
-         <td><%= inquiry.client %></td>
-        <td><%= inquiry.contact %></td>
-        <td><%= inquiry.kinkyu %></td>
-        <td><%= inquiry.deadline %></td>
+        <td><%= inquiry.utanto %></td>
         <td><%= inquiry.ttanto %></td>
+        <td><%= inquiry.client %></td>
+        <td><%= inquiry.ctanto %></td>
+        <td><%= inquiry.title %></td>
+        <td><%= inquiry.memo %></td>
+        <td><%= inquiry.deadline %></td>
+        <td><%= inquiry.jyokyo %></td>
+        <td><%= inquiry.contact %></td>
+        <td><%= inquiry.youken %></td>
+        <td><%= inquiry.recontact %></td>
+        <td><%= inquiry.kinkyu %></td>
+        <td><%= inquiry.taiou %></td>
+        <td><%= inquiry.gotaiou %></td>
+        <td><%= inquiry.tmemo %></td>
+
         <td><%= link_to 'Show', inquiry %></td>
         <td><%= link_to 'Edit', edit_inquiry_path(inquiry) %></td>
         <td><%= link_to 'Destroy', inquiry, method: :delete, data: { confirm: 'Are you sure?' } %></td>

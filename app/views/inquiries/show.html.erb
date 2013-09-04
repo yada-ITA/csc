@@ -1,10 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Id:</strong>
+  <%= @inquiry.id %>
+</p>
+
+<p>
   <strong>受付日:</strong>
   <%= @inquiry.receptiondate %>
 </p>
-
+  
 <p>
   <strong>受付者:</strong>
   <%= @inquiry.utanto %>
@@ -23,6 +28,11 @@
 <p>
  <strong>物件名:</strong>
  <%= @inquiry.title %>
+</p>
+
+<p>
+  <strong>メモ:</strong>
+  <%= @inquiry.memo %>
 </p>
 
 <p>
@@ -48,11 +58,6 @@
 <p>
  <strong>対応担当者:</strong>
  <%= @inquiry.ttanto %>
-</p>
-
-<p>
-  <strong>メモ:</strong>
-  <%= @inquiry.memo %>
 </p>
 
 <p>
