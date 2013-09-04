@@ -10,32 +10,89 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :receptiondate %><br>
+  
+ <div class="field">
+    <%= f.label :受付日 %><br>
     <%= f.datetime_select :receptiondate %>
   </div>
-  <div class="field">
-    <%= f.label :contact %><br>
-    <%= f.text_field :contact %>
+  
+   <div class="field">
+    <%= f.label :受付者 %><br>
+    <%= f.text_field :utanto %>
   </div>
+  
   <div class="field">
-    <%= f.label :client %><br>
+    <%= f.label :顧客名 %><br>
     <%= f.text_field :client %>
   </div>
-  <div class="field">
-    <%= f.label :deadline %><br>
-    <%= f.datetime_select :deadline %>
+  
+   <div class="field">
+    <%= f.label :顧客担当者 %><br>
+    <%= f.text_field :ctanto %>
   </div>
+  
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :物件名 %><br>
     <%= f.text_field :title %>
   </div>
+  
   <div class="field">
-    <%= f.label :memo %><br>
+    <%= f.label :アクション %><br>
+    <%= f.text_field :contact %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :用件 %><br>
+    <%= f.text_field :youken %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :リアクション %><br>
+    <%= f.text_field :recontact %>
+  </div>
+  
+ <div class="field">
+    <%= f.label :処理期日 %><br>
+    <%= f.datetime_select :deadline %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :対応担当者 %><br>
+    <%= f.text_field :ttanto %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :メモ %><br>
     <%= f.text_area :memo %>
   </div>
+  
+  <div class="field">
+    <%= f.label :緊急度 %><br>
+    <%= f.text_field :kinkyu %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :対応状況 %><br>
+    <%= f.text_field :jyokyo %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :処理対応 %><br>
+    <%= f.text_field :taiou %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :今後の対応 %><br>
+    <%= f.text_field :gotaiou %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :対応担当メモ %><br>
+    <%= f.text_area :tmemo %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
+  
 <% end %>
