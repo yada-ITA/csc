@@ -1,10 +1,11 @@
 <h1>Listing inquiries</h1>
 
 <br>
- <th>search id</th>
- <%= form_tag"/inquiries/search" do %>
-   <% submit_tag"search" %>
- <% end %>
+<h2>id検索</h2>
+<%= form_tag "search", method: :get do %>
+<p><%= text_field_tag "id", params[:id] %>
+<%= submit_tag "検索" %></p>
+<% end %>
 
 <br>
 <table>
