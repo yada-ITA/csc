@@ -2,6 +2,8 @@ Csc::Application.routes.draw do
 
   root:to => 'inquiries#index'
   devise_for :users
+  
+  get '/search' => 'inquiries#search'
   resources :inquiries
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -58,4 +60,10 @@ Csc::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+   resources :inquiries do
+      collection do
+        get :search
+      end
+   end
 end

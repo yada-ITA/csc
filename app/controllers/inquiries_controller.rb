@@ -62,6 +62,20 @@ class InquiriesController < ApplicationController
     end
   end
 
+  def search
+    result = Inquiry.all()
+    if !params[:id].blank?
+      result = result.where('id = ?', params[:id])
+    end
+    
+    if !params[:contact].blank?
+      result = result.where('contact = ?', params[:contact])
+    end
+    
+    @inquiries = result
+    render "index"
+   end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_inquiry
@@ -72,4 +86,5 @@ class InquiriesController < ApplicationController
     def inquiry_params
       params.require(:inquiry).permit(:receptiondate, :contact, :client, :memo, :deadline, :title, :utanto, :ttanto, :ctanto, :jyokyo, :youken, :recontact, :kinkyu, :taiou, :gotaiou, :tmemo)
     end
+    
 end
