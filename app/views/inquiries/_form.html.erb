@@ -10,7 +10,9 @@
       </ul>
     </div>
   <% end %>
-
+  
+    <%= f.label :id %>:
+    <%= @inquiry.id %>
   <div class="field">
     <%= f.label :receeptiondate %><br>
     <%= f.datetime_select :receeptiondate %>

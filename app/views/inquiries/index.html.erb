@@ -1,8 +1,16 @@
 <h1>Listing inquiries</h1>
 
+<br>
+ <th>search id</th>
+ <%= form_tag"/inquiries/search" do %>
+   <% submit_tag"search" %>
+ <% end %>
+
+<br>
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Receeptiondate</th>
       <th>Contact</th>
       <th>Client</th>
@@ -18,6 +26,7 @@
   <tbody>
     <% @inquiries.each do |inquiry| %>
       <tr>
+        <td><%= inquiry.id %></td>
         <td><%= inquiry.receeptiondate %></td>
         <td><%= inquiry.contact %></td>
         <td><%= inquiry.client %></td>
