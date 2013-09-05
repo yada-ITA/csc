@@ -7,12 +7,12 @@
   
 <p>
   <strong>受付者:</strong>
-  <%= @inquiry.utanto %>
+  <%= Ctantom.where(:ctuid => current_user.userno).first.ctname %>
 </p>
 
 <p>
   <strong>担当:</strong>
-  <%= @inquiry.ttanto %>
+  <%= @inquiry.ctantom.ctname %>
 </p>
 
 <p>

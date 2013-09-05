@@ -92,7 +92,8 @@ class InquiriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def inquiry_params
-      params.require(:inquiry).permit(:receptiondate, :contact, :client, :memo, :deadline, :title, :utanto, :ttanto, :ctanto, :jyokyo, :youken, :recontact, :kinkyu, :taiou, :gotaiou, :tmemo, :ctantom_id, :contact_id)
+      params.require(:inquiry).permit(:receptiondate, :contact, :client, :memo, :deadline, :title, :utanto, :ctanto, :jyokyo, :youken, :recontact, :kinkyu, :taiou, :gotaiou, :tmemo, :ctantom_id, :contact_id)
+
     end
     
 end
