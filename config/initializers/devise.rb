@@ -251,12 +251,15 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = "/my_engine/users/auth"
   config.authentication_keys = [ :login]
   
-  def self.find_first_by_auth_conditions(warden_conditions)
-      conditions = warden_conditions.dup
-      if login = conditions.delete(:login)
-        where(conditions).where(["lower(userid) = :value OR lower(email) = :value", { :value => login.downcase }]).first
-      else
-        where(conditions).first
-      end
-   end
+  config.reset_password_keys = [ :login ]
+  config.confirmation_keys = [ :login ]
+  
+  Devise::ParameterSanitizer.class_eval do
+  def sign_up
+    default_params.permit(auth_keys + [:password, :password_confirmation,:original_email,:original_userno])
+  end
+  private :sign_up
+  end
+
+  
 end
