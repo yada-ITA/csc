@@ -23,7 +23,7 @@
   
   <div class="field">
     <%= f.label :受付者 %><br>
-    <%= text_field_tag :name, params[:login_name] %>
+    <%= Ctantom.where(:ctuid => current_user.userno).first.ctname %>
   </div>
   
   <div class="field">
