@@ -27,13 +27,8 @@
   </div>
   
   <div class="field">
-<<<<<<< HEAD
-    <%= f.label :対応担当者 %><br>
-    <%= f.text_field :ttanto %>
-=======
     <%= f.label :対応担当者 %>（※）<br>
     <%= f.collection_select( :ctantom_id, @ctantoms, :id, :ctname, :include_blank => true ) %>
->>>>>>> 3a4e123e66bb06aaaebf45c118687d6a8214edaf
   </div>
   
   <div class="field">
