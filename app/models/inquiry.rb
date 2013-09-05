@@ -4,6 +4,7 @@ class Inquiry < ActiveRecord::Base
 
   acts_as_paranoid
 
+  belongs_to :contacts
   validates :receptiondate, :presence=> true
   validates :ttanto, :presence=> true
   validates :client, :presence=> true
