@@ -5,6 +5,7 @@ Csc::Application.routes.draw do
   
   get '/search' => 'inquiries#search'
   resources :inquiries
+  resources :ctantoms
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -66,4 +67,5 @@ Csc::Application.routes.draw do
         get :search
       end
    end
+
 end

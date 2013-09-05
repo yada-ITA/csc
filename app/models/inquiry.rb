@@ -1,5 +1,6 @@
 # coding: utf-8
 class Inquiry < ActiveRecord::Base
+ belongs_to :ctantom
 
   validates :receptiondate, :presence=> true
   validates :ttanto, :presence=> true

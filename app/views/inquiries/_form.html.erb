@@ -16,14 +16,14 @@
     <%= @inquiry.id %>
   </div>
 
- <div class="field">
+  <div class="field">
     <%= f.label :受付日 %><br>
     <%= f.datetime_select :receptiondate %>
   </div>
   
-   <div class="field">
+  <div class="field">
     <%= f.label :受付者 %><br>
-    <%= f.text_field :utanto %>
+    <%= f.collection_select( :ctantom_id, @ctantoms, :id, :ctname, :include_blank => true ) %>
   </div>
   
   <div class="field">

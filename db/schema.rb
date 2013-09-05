@@ -11,18 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130905022650) do
-
-  create_table "customers", force: true do |t|
-    t.string   "name"
-    t.string   "code"
-    t.string   "kana"
-    t.string   "address"
-    t.string   "tel"
-    t.string   "fax"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20130905065650) do
 
   create_table "ctantoms", force: true do |t|
     t.string   "ctuid"
@@ -41,6 +30,17 @@ ActiveRecord::Schema.define(version: 20130905022650) do
     t.string   "ctjuid3"
     t.string   "ctjmailofc3"
     t.string   "ctjmailmp3"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "customers", force: true do |t|
+    t.string   "name"
+    t.string   "code"
+    t.string   "kana"
+    t.string   "address"
+    t.string   "tel"
+    t.string   "fax"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
