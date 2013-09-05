@@ -1,0 +1,81 @@
+<%= form_for(@ctantom) do |f| %>
+  <% if @ctantom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ctantom.errors.count, "error") %> prohibited this ctantom from being saved:</h2>
+
+      <ul>
+      <% @ctantom.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ctuid %><br>
+    <%= f.text_field :ctuid %>
+  </div>
+  <div class="field">
+    <%= f.label :ctname %><br>
+    <%= f.text_field :ctname %>
+  </div>
+  <div class="field">
+    <%= f.label :ctmailofc %><br>
+    <%= f.text_field :ctmailofc %>
+  </div>
+  <div class="field">
+    <%= f.label :ctmailmp %><br>
+    <%= f.text_field :ctmailmp %>
+  </div>
+  <div class="field">
+    <%= f.label :ctjname1 %><br>
+    <%= f.text_field :ctjname1 %>
+  </div>
+  <div class="field">
+    <%= f.label :ctjuid1 %><br>
+    <%= f.text_field :ctjuid1 %>
+  </div>
+  <div class="field">
+    <%= f.label :ctjmailofc1 %><br>
+    <%= f.text_field :ctjmailofc1 %>
+  </div>
+  <div class="field">
+    <%= f.label :ctjmailmp1 %><br>
+    <%= f.text_field :ctjmailmp1 %>
+  </div>
+  <div class="field">
+    <%= f.label :ctjname2 %><br>
+    <%= f.text_field :ctjname2 %>
+  </div>
+  <div class="field">
+    <%= f.label :ctjuid2 %><br>
+    <%= f.text_field :ctjuid2 %>
+  </div>
+  <div class="field">
+    <%= f.label :ctjmailofc2 %><br>
+    <%= f.text_field :ctjmailofc2 %>
+  </div>
+  <div class="field">
+    <%= f.label :ctjmailmp2 %><br>
+    <%= f.text_field :ctjmailmp2 %>
+  </div>
+  <div class="field">
+    <%= f.label :ctjname3 %><br>
+    <%= f.text_field :ctjname3 %>
+  </div>
+  <div class="field">
+    <%= f.label :ctjuid3 %><br>
+    <%= f.text_field :ctjuid3 %>
+  </div>
+  <div class="field">
+    <%= f.label :ctjmailofc3 %><br>
+    <%= f.text_field :ctjmailofc3 %>
+  </div>
+  <div class="field">
+    <%= f.label :ctjmailmp3 %><br>
+    <%= f.text_field :ctjmailmp3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
