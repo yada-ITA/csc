@@ -31,6 +31,7 @@ class InquiriesController < ApplicationController
   def create
     @inquiry = Inquiry.new(inquiry_params)
     @ctantoms = Ctantom.all
+    @contacts = Contact.all
 
     respond_to do |format|
       if @inquiry.save
