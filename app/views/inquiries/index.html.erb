@@ -5,8 +5,8 @@
 <%= form_tag "search", method: :get do %>
 <p><%= text_field_tag "id", params[:id] %>
 
-<h2>contact検索</h2>
-<p><%= text_field_tag "contact", params[:contact] %>
+<h2>担当者検索</h2>
+<p><%= text_field_tag "ttanto", params[:ttanto] %>
 
 <%= submit_tag "検索" %></p>
 <% end %>
@@ -49,8 +49,8 @@
         <td><%= inquiry.ctanto %></td>
         <td><%= inquiry.title %></td>
         <td><%= inquiry.memo %></td>
-        <td><%= inquiry.deadline %></td>
-        <td><%= inquiry.jyokyo %></td>
+        <td><%= inquiry.deadline_color %></td>
+        <td><%= inquiry.jyokyo_color %></td>
         <td><%= inquiry.contact %></td>
         <td><%= inquiry.youken %></td>
         <td><%= inquiry.recontact %></td>

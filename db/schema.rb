@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130905013003) do
+ActiveRecord::Schema.define(version: 20130905022650) do
 
   create_table "customers", force: true do |t|
     t.string   "name"
@@ -20,6 +20,27 @@ ActiveRecord::Schema.define(version: 20130905013003) do
     t.string   "address"
     t.string   "tel"
     t.string   "fax"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ctantoms", force: true do |t|
+    t.string   "ctuid"
+    t.string   "ctname"
+    t.string   "ctmailofc"
+    t.string   "ctmailmp"
+    t.string   "ctjname1"
+    t.string   "ctjuid1"
+    t.string   "ctjmailofc1"
+    t.string   "ctjmailmp1"
+    t.string   "ctjname2"
+    t.string   "ctjuid2"
+    t.string   "ctjmailofc2"
+    t.string   "ctjmailmp2"
+    t.string   "ctjname3"
+    t.string   "ctjuid3"
+    t.string   "ctjmailofc3"
+    t.string   "ctjmailmp3"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,9 +61,11 @@ ActiveRecord::Schema.define(version: 20130905013003) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "userno"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["userno"], name: "index_users_on_userno", unique: true
 
 end

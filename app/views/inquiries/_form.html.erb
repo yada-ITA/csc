@@ -58,37 +58,37 @@
   
   <div class="field">
     <%= f.label :対応状況 %><br>
-    <%= f.text_field :jyokyo %>
+    <%= f.select :jyokyo, [["受付待ち","受付待ち"],["対応中","対応中"],["完了","完了"]],  :prompt => "選択して下さい" %>
   </div>
   
   <div class="field">
     <%= f.label :アクション %><br>
-    <%= f.text_field :contact %>
+    <%= f.select :contact, [["電話がありました。", "電話がありました。"], ["FAXがありました。", "FAXがありました。"], ["来訪されました。", "来訪されました。"]], :prompt => "選択してください。" %>
   </div>
   
   <div class="field">
     <%= f.label :用件 %><br>
-    <%= f.text_field :youken %>
+    <%= f.select :youken,[["見積もりの件", "見積もりの件"], ["工事日程の件", "工事日程の件"], ["請求書の件", "請求書の件"], ["書類の件", "書類の件"], ["報告書の件", "報告書の件"], ["注文", "注文"], ["クレーム", "クレーム"], ["その他", "その他"]], :prompt => "選択してください。" %>
   </div>
   
   <div class="field">
     <%= f.label :リアクション %><br>
-    <%= f.text_field :recontact %>
+    <%= f.select :recontact, [["また電話があります。", "また電話があります。"], ["折返し電話をください。", "折返し電話をください。"], ["その他を要望されています。", "その他を要望されています。"]], :prompt => "選択してください。"  %>
   </div>
   
   <div class="field">
     <%= f.label :緊急度 %><br>
-    <%= f.text_field :kinkyu %>
+    <%= f.select :kinkyu, [["大至急", "大至急"], ["至急", "至急"], ["通常", "通常"], ["後回し", "後回し"]], :prompt => "選択してください。" %>
   </div>
   
   <div class="field">
     <%= f.label :処理対応 %><br>
-    <%= f.text_field :taiou %>
+    <%= f.select :taiou, [["TEL済", "TEL済"], ["FAX済", "FAX済"], ["必要書類確認済", "必要書類確認済"], ["内容確認済", "内容確認済"], ["訪問済", "訪問済"], ["来社済", "来社済"]], :prompt => "選択してください。" %>
   </div>
   
   <div class="field">
     <%= f.label :今後の対応 %><br>
-    <%= f.text_field :gotaiou %>
+    <%= f.select :gotaiou, [["TEL要", "TEL要"], ["FAX要", "FAX要"], ["必要書類確認要", "必要書類確認要"], ["内容確認要", "内容確認要"], ["訪問要", "訪問要"], ["来社予定", "来社予定"]], :prompt => "選択してください。" %>
   </div>
   
   <div class="field">

@@ -1,0 +1,57 @@
+<h1>Listing ctantoms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ctuid</th>
+      <th>Ctname</th>
+      <th>Ctmailofc</th>
+      <th>Ctmailmp</th>
+      <th>Ctjname1</th>
+      <th>Ctjuid1</th>
+      <th>Ctjmailofc1</th>
+      <th>Ctjmailmp1</th>
+      <th>Ctjname2</th>
+      <th>Ctjuid2</th>
+      <th>Ctjmailofc2</th>
+      <th>Ctjmailmp2</th>
+      <th>Ctjname3</th>
+      <th>Ctjuid3</th>
+      <th>Ctjmailofc3</th>
+      <th>Ctjmailmp3</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ctantoms.each do |ctantom| %>
+      <tr>
+        <td><%= ctantom.ctuid %></td>
+        <td><%= ctantom.ctname %></td>
+        <td><%= ctantom.ctmailofc %></td>
+        <td><%= ctantom.ctmailmp %></td>
+        <td><%= ctantom.ctjname1 %></td>
+        <td><%= ctantom.ctjuid1 %></td>
+        <td><%= ctantom.ctjmailofc1 %></td>
+        <td><%= ctantom.ctjmailmp1 %></td>
+        <td><%= ctantom.ctjname2 %></td>
+        <td><%= ctantom.ctjuid2 %></td>
+        <td><%= ctantom.ctjmailofc2 %></td>
+        <td><%= ctantom.ctjmailmp2 %></td>
+        <td><%= ctantom.ctjname3 %></td>
+        <td><%= ctantom.ctjuid3 %></td>
+        <td><%= ctantom.ctjmailofc3 %></td>
+        <td><%= ctantom.ctjmailmp3 %></td>
+        <td><%= link_to 'Show', ctantom %></td>
+        <td><%= link_to 'Edit', edit_ctantom_path(ctantom) %></td>
+        <td><%= link_to 'Destroy', ctantom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ctantom', new_ctantom_path %>
