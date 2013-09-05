@@ -3,7 +3,7 @@ class Inquiry < ActiveRecord::Base
  belongs_to :ctantom
 
   validates :receptiondate, :presence=> true
-  validates :ttanto, :presence=> true
+  #validates :ttanto, :presence=> true
   validates :client, :presence=> true
   validates :title, :presence=> true  
   validates :deadline, :presence=> true

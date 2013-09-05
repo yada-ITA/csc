@@ -1,5 +1,6 @@
-<h1>Listing inquiries</h1>
+ <%= Ctantom.where(:ctuid => current_user.userno).first.ctname %>
 
+<h1>Listing inquiries</h1>
 
 <h2>id検索</h2>
 <%= form_tag "search", method: :get do %>
@@ -43,7 +44,7 @@
       <tr>
         <td><%= inquiry.id %></td>
         <td><%= inquiry.receptiondate %></td>
-        <td><%= inquiry.utanto %></td>
+        <td><%= Ctantom.where(:ctuid => current_user.userno).first.ctname %></td>
         <td><%= inquiry.ctantom.ctname %></td>
         <td><%= inquiry.client %></td>
         <td><%= inquiry.ctanto %></td>
@@ -70,3 +71,4 @@
 <br>
 
 <%= link_to 'New Inquiry', new_inquiry_path %>
+
