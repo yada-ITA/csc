@@ -1,6 +1,8 @@
 # coding: utf-8
 class Inquiry < ActiveRecord::Base
 
+  acts_as_paranoid
+
   validates :receptiondate, :presence=> true
   validates :ttanto, :presence=> true
   validates :client, :presence=> true
@@ -9,7 +11,7 @@ class Inquiry < ActiveRecord::Base
   validates :contact, :presence=> true
   validates :youken, :presence=> true
   validates :recontact, :presence=> true
-  validates :contact, :length=> (2..8)
+  validates :contact, :length=> (2..80)
   
   def jyokyo_color
   	text = jyokyo
