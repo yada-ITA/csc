@@ -1,4 +1,8 @@
+# coding: utf-8
 class Inquiry < ActiveRecord::Base
+ belongs_to :ctantom
+
+  acts_as_paranoid
 
   belongs_to :contacts
   validates :receptiondate, :presence=> true
@@ -9,6 +13,29 @@ class Inquiry < ActiveRecord::Base
   validates :contact, :presence=> true
   validates :youken, :presence=> true
   validates :recontact, :presence=> true
-  validates :contact, :length=> (2..8)
+  validates :contact, :length=> (2..80)
+  
+  def jyokyo_color
+  	text = jyokyo
+    if jyokyo == "完了"
+      text = "<font color =\"#0000ff\">" + jyokyo + "</font>"
+    end
+   
+    return  text.html_safe 
+   
+    
+  end
+
+  def deadline_color
+    
+  	text = deadline.to_s
+    if deadline < Time.now
+      text = "<font color =\"#ff0000\">" + deadline.to_s + "</font>"
+    end
+   
+    return  text.html_safe 
+   
+    
+  end
   
 end

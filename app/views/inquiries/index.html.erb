@@ -43,14 +43,20 @@
         <td><%= inquiry.id %></td>
         <td><%= inquiry.receptiondate %></td>
         <td><%= inquiry.utanto %></td>
-        <td><%= inquiry.ttanto %></td>
+        <td><%= inquiry.ctantom.ctname %></td>
         <td><%= inquiry.client %></td>
         <td><%= inquiry.ctanto %></td>
         <td><%= inquiry.title %></td>
         <td><%= inquiry.memo %></td>
+<<<<<<< HEAD
         <td><%= inquiry.deadline %></td>
         <td><%= inquiry.jyokyo %></td>
         <td><%= inquiry.contact_id %></td>
+=======
+        <td><%= inquiry.deadline_color %></td>
+        <td><%= inquiry.jyokyo_color %></td>
+        <td><%= inquiry.contact %></td>
+>>>>>>> 3a4e123e66bb06aaaebf45c118687d6a8214edaf
         <td><%= inquiry.youken %></td>
         <td><%= inquiry.recontact %></td>
         <td><%= inquiry.kinkyu %></td>
@@ -60,7 +66,7 @@
 
         <td><%= link_to 'Show', inquiry %></td>
         <td><%= link_to 'Edit', edit_inquiry_path(inquiry) %></td>
-        <td><%= link_to 'Destroy', inquiry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!--td><%= link_to 'Destroy', inquiry, method: :delete, data: { confirm: '削除しますか?' } %></td-->
       </tr>
     <% end %>
   </tbody>
