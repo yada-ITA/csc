@@ -17,7 +17,7 @@
   </div>
 
  <div class="field">
-    <%= f.label :受付日 %><br>
+    <%= f.label :受付日 %>(※)<br>
     <%= f.datetime_select :receptiondate %>
   </div>
   
@@ -27,22 +27,22 @@
   </div>
   
   <div class="field">
-    <%= f.label :対応担当者 %><br>
+    <%= f.label :対応担当者 %>（※）<br>
     <%= f.text_field :ttanto %>
   </div>
   
   <div class="field">
-    <%= f.label :顧客名 %><br>
+    <%= f.label :顧客名 %>（※）<br>
     <%= f.text_field :client %>
   </div>
   
    <div class="field">
-    <%= f.label :顧客担当者 %><br>
+    <%= f.label :顧客担当者 %>（※）<br>
     <%= f.text_field :ctanto %>
   </div>
   
   <div class="field">
-    <%= f.label :物件名 %><br>
+    <%= f.label :物件名 %>（※）<br>
     <%= f.text_field :title %>
   </div>
   
@@ -52,7 +52,7 @@
   </div>
   
  <div class="field">
-    <%= f.label :処理期日 %><br>
+    <%= f.label :処理期日 %>（※）<br>
     <%= f.datetime_select :deadline %>
   </div>
   
@@ -62,17 +62,17 @@
   </div>
   
   <div class="field">
-    <%= f.label :アクション %><br>
+    <%= f.label :アクション %>（※）<br>
     <%= f.select :contact, [["電話がありました。", "電話がありました。"], ["FAXがありました。", "FAXがありました。"], ["来訪されました。", "来訪されました。"]], :prompt => "選択してください。" %>
   </div>
   
   <div class="field">
-    <%= f.label :用件 %><br>
+    <%= f.label :用件（※） %><br>
     <%= f.select :youken,[["見積もりの件", "見積もりの件"], ["工事日程の件", "工事日程の件"], ["請求書の件", "請求書の件"], ["書類の件", "書類の件"], ["報告書の件", "報告書の件"], ["注文", "注文"], ["クレーム", "クレーム"], ["その他", "その他"]], :prompt => "選択してください。" %>
   </div>
   
   <div class="field">
-    <%= f.label :リアクション %><br>
+    <%= f.label :リアクション %>（※）<br>
     <%= f.select :recontact, [["また電話があります。", "また電話があります。"], ["折返し電話をください。", "折返し電話をください。"], ["その他を要望されています。", "その他を要望されています。"]], :prompt => "選択してください。"  %>
   </div>
   
