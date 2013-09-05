@@ -27,6 +27,7 @@
   </div>
   
   <div class="field">
+    <%= f.text_field :contact, :maxlength =>8 %>
     <%= f.label :対応担当者 %><br>
     <%= f.text_field :ttanto %>
   </div>
@@ -58,7 +59,7 @@
   
   <div class="field">
     <%= f.label :対応状況 %><br>
-    <%= f.text_field :jyokyo %>
+    <%= f.select :jyokyo, [["受付待ち","受付待ち"],["対応中","対応中"],["完了","完了"]],  :prompt => "選択して下さい" %>
   </div>
   
   <div class="field">

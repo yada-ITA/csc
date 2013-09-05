@@ -68,8 +68,8 @@ class InquiriesController < ApplicationController
       result = result.where('id = ?', params[:id])
     end
     
-    if !params[:contact].blank?
-      result = result.where('contact = ?', params[:contact])
+    if !params[:ttanto].blank?
+      result = result.where('ttanto = ?', params[:ttanto])
     end
     
     @inquiries = result

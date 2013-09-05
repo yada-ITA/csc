@@ -1,6 +1,10 @@
 Csc::Application.routes.draw do
 
+  resources :actions
+
+  resources :customers
   resources :ctantoms
+
 
   root:to => 'inquiries#index'
   devise_for :users
