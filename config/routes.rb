@@ -1,5 +1,7 @@
 Csc::Application.routes.draw do
 
+  resources :contacts
+
   resources :actions
 
   resources :customers

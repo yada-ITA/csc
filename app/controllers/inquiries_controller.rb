@@ -16,10 +16,12 @@ class InquiriesController < ApplicationController
   # GET /inquiries/new
   def new
     @inquiry = Inquiry.new
+    @contacts = Contact.all
   end
 
   # GET /inquiries/1/edit
   def edit
+    @contacts = Contact.all
   end
 
   # POST /inquiries
@@ -41,6 +43,7 @@ class InquiriesController < ApplicationController
   # PATCH/PUT /inquiries/1
   # PATCH/PUT /inquiries/1.json
   def update
+    @contacts = Contact.all
     respond_to do |format|
       if @inquiry.update(inquiry_params)
         format.html { redirect_to @inquiry, notice: 'Inquiry was successfully updated.' }
@@ -84,7 +87,7 @@ class InquiriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def inquiry_params
-      params.require(:inquiry).permit(:receptiondate, :contact, :client, :memo, :deadline, :title, :utanto, :ttanto, :ctanto, :jyokyo, :youken, :recontact, :kinkyu, :taiou, :gotaiou, :tmemo)
+      params.require(:inquiry).permit(:receptiondate, :contact, :client, :memo, :deadline, :title, :utanto, :ttanto, :ctanto, :jyokyo, :youken, :recontact, :kinkyu, :taiou, :gotaiou, :tmemo, :contact_id)
     end
     
 end
