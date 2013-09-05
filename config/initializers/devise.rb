@@ -254,12 +254,7 @@ Devise.setup do |config|
   config.reset_password_keys = [ :login ]
   config.confirmation_keys = [ :login ]
   
-  Devise::ParameterSanitizer.class_eval do
-  def sign_up
-    default_params.permit(auth_keys + [:password, :password_confirmation,:original_email,:original_userno])
-  end
-  private :sign_up
-  end
+  
 
   
 end
