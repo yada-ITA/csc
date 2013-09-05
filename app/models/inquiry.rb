@@ -1,5 +1,6 @@
 # coding: utf-8
 class Inquiry < ActiveRecord::Base
+ belongs_to :ctantom
 
   acts_as_paranoid
 

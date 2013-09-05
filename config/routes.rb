@@ -7,6 +7,7 @@ Csc::Application.routes.draw do
   
   get '/search' => 'inquiries#search'
   resources :inquiries
+  resources :ctantoms
 
   devise_for :users
 
@@ -71,4 +72,5 @@ Csc::Application.routes.draw do
         get :search
       end
    end
+
 end
