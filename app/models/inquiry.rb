@@ -1,6 +1,8 @@
 # coding: utf-8
 class Inquiry < ActiveRecord::Base
 
+  acts_as_paranoid
+
   validates :receptiondate, :presence=> true
   validates :ttanto, :presence=> true
   validates :client, :presence=> true
