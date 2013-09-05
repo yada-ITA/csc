@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130904015346) do
+ActiveRecord::Schema.define(version: 20130905022650) do
+
+  create_table "ctantoms", force: true do |t|
+    t.string   "ctuid"
+    t.string   "ctname"
+    t.string   "ctmailofc"
+    t.string   "ctmailmp"
+    t.string   "ctjname1"
+    t.string   "ctjuid1"
+    t.string   "ctjmailofc1"
+    t.string   "ctjmailmp1"
+    t.string   "ctjname2"
+    t.string   "ctjuid2"
+    t.string   "ctjmailofc2"
+    t.string   "ctjmailmp2"
+    t.string   "ctjname3"
+    t.string   "ctjuid3"
+    t.string   "ctjmailofc3"
+    t.string   "ctjmailmp3"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 # Could not dump table "inquiries" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
