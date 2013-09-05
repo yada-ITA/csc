@@ -1,3 +1,4 @@
+# coding: utf-8
 class Inquiry < ActiveRecord::Base
 
   validates :receptiondate, :presence=> true
@@ -9,5 +10,28 @@ class Inquiry < ActiveRecord::Base
   validates :youken, :presence=> true
   validates :recontact, :presence=> true
   validates :contact, :length=> (2..8)
+  
+  def jyokyo_color
+  	text = jyokyo
+    if jyokyo == "完了"
+      text = "<font color =\"#0000ff\">" + jyokyo + "</font>"
+    end
+   
+    return  text.html_safe 
+   
+    
+  end
+
+  def deadline_color
+    
+  	text = deadline.to_s
+    if deadline < Time.now
+      text = "<font color =\"#ff0000\">" + deadline.to_s + "</font>"
+    end
+   
+    return  text.html_safe 
+   
+    
+  end
   
 end
