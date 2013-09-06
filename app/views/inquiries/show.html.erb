@@ -2,7 +2,7 @@
 
 <p>
   <strong>受付日:</strong>
-  <%= @inquiry.receptiondate %>
+  <%= @inquiry.receptiondate.strftime("%Y年%m月%d日 %H:%M") %>
 </p>
   
 <p>
@@ -52,7 +52,7 @@
 
 <p>
  <strong>処理期日:</strong>
- <%= @inquiry.deadline %>
+ <%= @inquiry.deadline.strftime("%Y年%m月%d日 %H:%M") %>
 </p>
 
 <p>

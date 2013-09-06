@@ -29,9 +29,9 @@ class Inquiry < ActiveRecord::Base
 
   def deadline_color
     
-  	text = deadline.to_s
+  	text = deadline.strftime("%Y年%m月%d日 %H:%M")
     if deadline < Time.now
-      text = "<font color =\"#ff0000\">" + deadline.to_s + "</font>"
+      text = "<font color =\"#ff0000\">" + deadline.strftime("%Y年%m月%d日 %H:%M") + "</font>"
     end
    
     return  text.html_safe 
