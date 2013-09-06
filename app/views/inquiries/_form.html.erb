@@ -15,20 +15,15 @@
     <%= f.label :id %>:
     <%= @inquiry.id %>
   </div>
-
-  <div class="field">
-    <%= f.label :受付日 %>(※)<br>
-    <%= f.datetime_select :receptiondate %>
+  
+ <div class="field">
+    <%= f.label :緊急度 %><br>
+    <%= f.select :kinkyu, [["大至急", "大至急"], ["至急", "至急"], ["通常", "通常"], ["後回し", "後回し"]], :prompt => "選択してください。"  %>
   </div>
   
   <div class="field">
-    <%= f.label :受付者 %><br>
-    <%= Ctantom.where(:ctuid => current_user.userno).first.ctname %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :対応担当者 %>（※）<br>
-    <%= f.collection_select( :ctantom_id, @ctantoms, :id, :ctname, :include_blank => true ) %>
+    <%= f.label :物件名 %>（※）<br>
+    <%= f.text_field :title %>
   </div>
   
   <div class="field">
@@ -42,33 +37,13 @@
   </div>
   
   <div class="field">
-    <%= f.label :物件名 %>（※）<br>
-    <%= f.text_field :title %>
+    <%= f.label :受付日 %>(※)<br>
+    <%= f.datetime_select :receptiondate %>
   </div>
-  
-  <div class="field">
-    <%= f.label :メモ %><br>
-    <%= f.text_area :memo %>
-  </div>
-  
- <div class="field">
-    <%= f.label :処理期日 %>（※）<br>
-    <%= f.date_select :deadline %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :対応状況 %><br>
-    <%= f.select :jyokyo, [["受付待ち","受付待ち"],["対応中","対応中"],["完了","完了"]],  :prompt => "選択して下さい" %>
-  </div>
-  
+   
   <div class="field">
     <%= f.label :アクション %>（※）<br>
     <%= f.collection_select(:contact_id, @contacts, :id, :name, :prompt => "選択して下さい") %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :用件（※） %><br>
-    <%= f.select :youken,[["見積もりの件", "見積もりの件"], ["工事日程の件", "工事日程の件"], ["請求書の件", "請求書の件"], ["書類の件", "書類の件"], ["報告書の件", "報告書の件"], ["注文", "注文"], ["クレーム", "クレーム"], ["その他", "その他"]], :prompt => "選択してください。" %>
   </div>
   
   <div class="field">
@@ -77,20 +52,46 @@
   </div>
   
   <div class="field">
-    <%= f.label :緊急度 %><br>
-    <%= f.text_field :kinkyu %>
+    <%= f.label :用件（※） %><br>
+    <%= f.select :youken,[["見積もりの件", "見積もりの件"], ["工事日程の件", "工事日程の件"], ["請求書の件", "請求書の件"], ["書類の件", "書類の件"], ["報告書の件", "報告書の件"], ["注文", "注文"], ["クレーム", "クレーム"], ["その他", "その他"]], :prompt => "選択してください。" %>
+  </div>
+  
+ <div class="field">
+    <%= f.label :処理期日 %>（※）<br>
+    <%= f.date_select :deadline %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :受付者 %><br>
+    <%= Ctantom.where(:ctuid => current_user.userno).first.ctname %>
+  </div>
+  
+    <div class="field">
+    <%= f.label :メモ %><br>
+    <%= f.text_area :memo %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :対応状況 %><br>
+    <%= f.select :jyokyo, [["対応依頼中","対応依頼中"],["対応中","対応中"],["対応完了","対応完了"]],  :prompt => "選択して下さい" %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :対応担当者 %>（※）<br>
+    <%= f.collection_select( :ctantom_id, @ctantoms, :id, :ctname, :include_blank => true ) %>
   </div>
   
   <div class="field">
     <%= f.label :処理対応 %><br>
-    <%= f.text_field :taiou %>
+    <%= f.select :taiou, [["TEL済", "TEL済"], ["FAX済", "FAX済"], ["必要書類作成済", "必要書類作成済"], ["内容確認済", "内容確認済"], ["訪問済", "訪問済"], ["来社済", "来社済"]], :prompt => "選択してください。" %>
   </div>
   
-  <div class="field">
+ <div class="field">
     <%= f.label :今後の対応 %><br>
-    <%= f.text_field :gotaiou %>
+    <%= f.select :gotaiou, [["TEL必要", "TEL必要"], ["FAX必要", "FAX必要"], ["必要書類作成必要", "必要書類作成必要"], ["内容確認必要", "内容確認必要"], ["訪問必要", "訪問必要"], ["来社予定", "来社予定"]], :prompt => "選択してください。" %>
   </div>
   
+ 
   <div class="field">
     <%= f.label :対応担当メモ %><br>
     <%= f.text_area :tmemo %>
