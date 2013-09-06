@@ -7,13 +7,17 @@ class Inquiry < ActiveRecord::Base
 
   belongs_to :contacts
   validates :receptiondate, :presence=> true
+<<<<<<< HEAD
+=======
+  validates :ttanto, :presence=> true
+>>>>>>> cf63f92d3a519efc894961bd59a3f528a70cadea
   validates :client, :presence=> true
   validates :title, :presence=> true  
   validates :deadline, :presence=> true
   validates :contact, :presence=> true
   validates :youken, :presence=> true
   validates :recontact, :presence=> true
-  validates :contact, :length=> (2..80)
+  #validates :contact, :length=> (2..80)
   
   def jyokyo_color
   	text = jyokyo
