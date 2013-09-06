@@ -9,22 +9,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>顧客名:</strong>
   <%= @customer.name %>
 </p>
 
 <p>
-  <strong>Code:</strong>
+  <strong>顧客№:</strong>
   <%= @customer.code %>
 </p>
 
 <p>
-  <strong>Kana:</strong>
+  <strong>カナ:</strong>
   <%= @customer.kana %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>住所:</strong>
   <%= @customer.address %>
 </p>
 
@@ -42,8 +42,8 @@
 <div id="map"></div>
 
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+<%= link_to '編集', edit_customer_path(@customer) %> |
+<%= link_to '戻る', customers_path %>
 
 <%= hidden_field_tag 'restaurantAddr', @customer.address %>
 <script>
@@ -68,3 +68,9 @@ alert(document.getElementById("restaurant_addr").value);
 }
 });
 </script>
+
+<br>
+<br>
+<%= form_tag('', :method => :delete) do %>
+  <input name="commit" type="submit" value="　完了　" /></p>
+<% end %>
