@@ -2,7 +2,7 @@
   サインイン ： 
   <%= Ctantom.where(:ctuid => current_user.userno).first.ctname %>
 
-<h1>Listing inquiries</h1>
+<h1>ＣＳコンシェルジュ</h1>
 
 <h2>id検索</h2>
 <%= form_tag "search", method: :get do %>
@@ -44,8 +44,8 @@
         <td><%= inquiry.ctanto %></td>
         <td><%= inquiry.kinkyu %></td>
          
-        <td><%= link_to 'Show', inquiry %></td>
-        <td><%= link_to 'Edit', edit_inquiry_path(inquiry) %></td>
+        <td><%= link_to '詳細', inquiry %></td>
+        <td><%= link_to '編集', edit_inquiry_path(inquiry) %></td>
         <!--td><%= link_to 'Destroy', inquiry, method: :delete, data: { confirm: '削除しますか?' } %></td-->
       </tr>
     <% end %>
@@ -54,5 +54,5 @@
 
 <br>
 
-<%= link_to 'New Inquiry', new_inquiry_path %>
+<%= link_to '新規作成', new_inquiry_path %>
 

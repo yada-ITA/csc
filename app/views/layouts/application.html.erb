@@ -9,6 +9,7 @@
 <body>
  <% if user_signed_in? %>
   <%=link_to"サインアウト",destroy_user_session_path, :method=>"DELETE", :class=>"btn"%> &nbsp;
+   <%= link_to "ＣＳコンシェルジュ", "http://localhost:3000/inquiries" %> &nbsp;
    <%= link_to "担当者マスタ登録", "http://localhost:3000/ctantoms" %> &nbsp;
    <%= link_to "顧客マスタ登録", "http://localhost:3000/customers" %>
   <% end %>
