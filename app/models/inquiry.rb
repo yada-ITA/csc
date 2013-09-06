@@ -7,7 +7,7 @@ class Inquiry < ActiveRecord::Base
 
   belongs_to :contacts
   validates :receptiondate, :presence=> true
-  validates :ttanto, :presence=> true
+  validates :ctantom_id, :presence=> true
   validates :client, :presence=> true
   validates :title, :presence=> true  
   validates :deadline, :presence=> true
