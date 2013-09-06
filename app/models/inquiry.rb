@@ -13,6 +13,7 @@ class Inquiry < ActiveRecord::Base
   validates :contact, :presence=> true
   validates :youken, :presence=> true
   validates :recontact, :presence=> true
+  validates :contact, :length=> (2..80)
   
   def jyokyo_color
   	text = jyokyo
