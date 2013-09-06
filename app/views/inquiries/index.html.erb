@@ -37,8 +37,8 @@
         <td><%= inquiry.id %></td>
         <td><%= inquiry.ctantom.ctname %></td>
         <td><%= inquiry.jyokyo %></td>
-        <td><%= inquiry.receptiondate %></td>
-        <td><%= inquiry.deadline %></td>
+        <td><%= inquiry.receptiondate.strftime("%Y年%m月%d日 %H:%M") %></td>
+        <td><%= inquiry.deadline_color %></td>
         <td><%= inquiry.title %></td>
         <td><%= inquiry.client %></td>
         <td><%= inquiry.ctanto %></td>
