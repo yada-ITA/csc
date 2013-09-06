@@ -7,14 +7,14 @@ class Inquiry < ActiveRecord::Base
 
   belongs_to :contacts
   validates :receptiondate, :presence=> true
-  validates :ttanto, :presence=> true
+  #validates :ttanto, :presence=> true
   validates :client, :presence=> true
   validates :title, :presence=> true  
   validates :deadline, :presence=> true
   validates :contact, :presence=> true
   validates :youken, :presence=> true
   validates :recontact, :presence=> true
-  #validates :contact, :length=> (2..80)
+  validates :contact, :length=> (2..80)
   
   def jyokyo_color
   	text = jyokyo
@@ -29,9 +29,9 @@ class Inquiry < ActiveRecord::Base
 
   def deadline_color
     
-  	text = deadline.to_s
+  	text = deadline.strftime("%Y年%m月%d日 %H:%M")
     if deadline < Time.now
-      text = "<font color =\"#ff0000\">" + deadline.to_s + "</font>"
+      text = "<font color =\"#ff0000\">" + deadline.strftime("%Y年%m月%d日 %H:%M") + "</font>"
     end
    
     return  text.html_safe 
