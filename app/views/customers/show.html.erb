@@ -9,17 +9,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>é¡§å®¢å:</strong>
+  <strong>ŒÚ‹q–¼:</strong>
   <%= @customer.name %>
 </p>
 
 <p>
-  <strong>é¡§å®¢ã‚³ãƒ¼ãƒ‰:</strong>
+  <strong>ŒÚ‹q‡‚:</strong>
   <%= @customer.code %>
 </p>
 
 <p>
-  <strong>ä½æ‰€:</strong>
+  <strong>ƒJƒi:</strong>
+  <%= @customer.kana %>
+</p>
+
+<p>
+  <strong>ZŠ:</strong>
   <%= @customer.address %>
 </p>
 
@@ -37,8 +42,8 @@
 <div id="map"></div>
 
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+<%= link_to '•ÒW', edit_customer_path(@customer) %> |
+<%= link_to '–ß‚é', customers_path %>
 
 <%= hidden_field_tag 'restaurantAddr', @customer.address %>
 <script>
@@ -63,3 +68,9 @@ alert(document.getElementById("restaurant_addr").value);
 }
 });
 </script>
+
+<br>
+<br>
+<%= form_tag('', :method => :delete) do %>
+  <input name="commit" type="submit" value="@Š®—¹@" /></p>
+<% end %>

@@ -3,11 +3,12 @@
 <table>
   <thead>
     <tr>
-      <th>　顧客名　</th>
-      <th>　顧客コード　</th>
-      <th>　住所　</th>
-      <th>　TEL　</th>
-      <th>　FAX　</th>
+      <th>�ڋq��</th>
+      <th>�ڋq��</th>
+      <th>�J�i</th>
+      <th>�Z��</th>
+      <th>Tel</th>
+      <th>Fax</th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,12 +20,12 @@
       <tr>
         <td><%= customer.name %></td>
         <td><%= customer.code %></td>
+        <td><%= customer.kana %></td>
         <td><%= customer.address %></td>
         <td><%= customer.tel %></td>
         <td><%= customer.fax %></td>
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '�ڍ�', customer %></td>
+        <td><%= link_to '�ҏW', edit_customer_path(customer) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,5 +33,4 @@
 
 <br>
 
-<%= link_to '新規登録', new_customer_path %> |
-<%= link_to 'Back', inquiries_path %>
+<%= link_to '�V�K�쐬', new_customer_path %>
