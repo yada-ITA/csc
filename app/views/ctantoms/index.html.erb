@@ -1,24 +1,28 @@
-<h1>Listing ctantoms</h1>
+ <br>
+  サインイン ： 
+  <%= Ctantom.where(:ctuid => current_user.userno).first.ctname %>
+
+<h1>ＹＥＳ担当者マスター</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Ctuid</th>
-      <th>Ctname</th>
-      <th>Ctmailofc</th>
-      <th>Ctmailmp</th>
-      <th>Ctjname1</th>
-      <th>Ctjuid1</th>
-      <th>Ctjmailofc1</th>
-      <th>Ctjmailmp1</th>
-      <th>Ctjname2</th>
-      <th>Ctjuid2</th>
-      <th>Ctjmailofc2</th>
-      <th>Ctjmailmp2</th>
-      <th>Ctjname3</th>
-      <th>Ctjuid3</th>
-      <th>Ctjmailofc3</th>
-      <th>Ctjmailmp3</th>
+      <th>社員№</th>
+      <th>名前</th>
+      <th>会社mail</th>
+      <th>携帯mail</th>
+      <th>上司1 名前</th>
+      <th>上司1 社員№</th>
+      <th>上司1 会社mail</th>
+      <th>上司1 携帯mail</th>
+      <th>上司2 名前</th>
+      <th>上司2 社員№</th>
+      <th>上司2 会社mail</th>
+      <th>上司2 携帯mail</th>
+      <th>上司3 名前</th>
+      <th>上司3 社員№</th>
+      <th>上司3 会社mail</th>
+      <th>上司3 携帯mail</th>
       <th></th>
       <th></th>
       <th></th>
@@ -44,14 +48,12 @@
         <td><%= ctantom.ctjuid3 %></td>
         <td><%= ctantom.ctjmailofc3 %></td>
         <td><%= ctantom.ctjmailmp3 %></td>
-        <td><%= link_to 'Show', ctantom %></td>
-        <td><%= link_to 'Edit', edit_ctantom_path(ctantom) %></td>
-        <td><%= link_to 'Destroy', ctantom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', ctantom %></td>
+        <td><%= link_to '編集', edit_ctantom_path(ctantom) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Ctantom', new_ctantom_path %>
+ <%= link_to '新規作成', new_ctantom_path %>

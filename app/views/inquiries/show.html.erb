@@ -90,13 +90,14 @@
   <strong>対応担当メモ:</strong>
   <%= @inquiry.tmemo %>
 </p>
-
-<%= link_to 'Edit', edit_inquiry_path(@inquiry) %> |
-<%= link_to 'Back', inquiries_path %> 
 <br>
 <br>
 <br>
 <%= form_tag('', :method => :delete) do %>
   <input name="commit" type="submit" value="　削除　" /></p>
 <% end %>
+
+<br>
+<%= link_to '編集', edit_inquiry_path(@inquiry) %> |
+<%= link_to '戻る', inquiries_path %> 
  
