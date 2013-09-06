@@ -1,18 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>受付日:</strong>
-  <%= @inquiry.receptiondate.strftime("%Y年%m月%d日 %H:%M") %>
-</p>
-  
-<p>
-  <strong>受付者:</strong>
-  <%= Ctantom.where(:ctuid => current_user.userno).first.ctname %>
-</p>
+
 
 <p>
-  <strong>担当:</strong>
-  <%= @inquiry.ctantom.ctname %>
+  <strong>緊急度:</strong>
+  <%= @inquiry.kinkyu %>
+</p>
+
+
+<p>
+ <strong>物件名:</strong>
+ <%= @inquiry.title %>
 </p>
 
 <p>
@@ -26,13 +24,8 @@
 </p>
 
 <p>
- <strong>物件名:</strong>
- <%= @inquiry.title %>
-</p>
-
-<p>
-  <strong>メモ:</strong>
-  <%= @inquiry.memo %>
+  <strong>受付日:</strong>
+  <%= @inquiry.receptiondate.strftime("%Y年%m月%d日 %H:%M") %>
 </p>
 
 <p>
@@ -41,29 +34,37 @@
 </p>
 
 <p>
- <strong>用件:</strong>
- <%= @inquiry.youken %>
-</p>
-
-<p>
  <strong>リアクション:</strong>
  <%= @inquiry.recontact %>
 </p>
 
 <p>
+ <strong>用件:</strong>
+ <%= @inquiry.youken %>
+</p>
+  
+<p>
  <strong>処理期日:</strong>
  <%= @inquiry.deadline.strftime("%Y年%m月%d日") %>
 </p>
-
+  
 <p>
- <strong>対応担当者:</strong>
- <%= @inquiry.ttanto %>
+  <strong>受付者:</strong>
+  <%= Ctantom.where(:ctuid => current_user.userno).first.ctname %>
 </p>
 
 <p>
-  <strong>緊急度:</strong>
-  <%= @inquiry.kinkyu %>
+  <strong>受付者メモ:</strong>
+  <%= @inquiry.memo %>
 </p>
+
+<br>
+
+<p>
+  <strong>=====================================</strong>
+</P>
+
+<br>
 
 <p>
  <strong>対応状況:</strong>
@@ -71,7 +72,12 @@
 </p>
 
 <p>
-  <strong>処理対応:</strong>
+  <strong>対応担当:</strong>
+  <%= @inquiry.ctantom.ctname %>
+</p>
+
+<p>
+  <strong>処理・対応内容:</strong>
   <%= @inquiry.taiou %>
 </p>
 
@@ -79,16 +85,18 @@
   <strong>今後の対応:</strong>
   <%= @inquiry.gotaiou %>
 </p>
+
 <p>
   <strong>対応担当メモ:</strong>
   <%= @inquiry.tmemo %>
 </p>
-<br>
-<%= form_tag('', :method => :delete) do %>
-  <input name="commit" type="submit" value="　完了　" /></p>
-<% end %>
 
-<br>
 <%= link_to 'Edit', edit_inquiry_path(@inquiry) %> |
 <%= link_to 'Back', inquiries_path %> 
+<br>
+<br>
+<br>
+<%= form_tag('', :method => :delete) do %>
+  <input name="commit" type="submit" value="　削除　" /></p>
+<% end %>
  
