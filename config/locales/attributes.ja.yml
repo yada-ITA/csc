@@ -2,7 +2,17 @@ ja:
   activerecord:
     attributes:
       user:
+        userno: 社員番号
         email: メールアドレス
         password: パスワード
         password_confirmation: パスワード（再入力）
         remember_me: 次回からパスワード入力を省く
+      inquiry:
+        receptiondate: 受付日
+        client: 顧客名
+        title: 物件名
+        deadline: 処理期日
+        contact: アクション
+        youken: 用件
+        recontact: リアクション
+        
